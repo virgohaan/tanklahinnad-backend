@@ -75,7 +75,7 @@ def refresh_cache():
         data = scrape_fuelest()
         cache["data"] = data
         cache["updated"] = time.time()
-        print(f"Uuendat
+        print(f"Uuendatud - {len(data)} tanklat")
 cd ~/tanklahinnad-backend
 python3 -c "import app; print('OK')"
 grep "executable_path" ~/tanklahinnad-backend/app.py
