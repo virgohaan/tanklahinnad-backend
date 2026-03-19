@@ -13,4 +13,4 @@ ENV CHROME_BIN=/usr/bin/chromium
 ENV CHROMEDRIVER_PATH=/usr/bin/chromedriver
 
 COPY . .
-CMD gunicorn app:app --bind 0.0.0.0:${PORT:-8080} --timeout 120
+CMD ["/bin/sh", "-c", "gunicorn app:app --bind 0.0.0.0:${PORT:-8080} --timeout 120"]
